@@ -24,7 +24,7 @@ class Item(models.Model):
     item_name = models.CharField(max_length=200,db_index=True)
     item_desc = models.TextField()
     item_price = models.IntegerField(db_index=True)
-    item_image = models.ImageField(upload_to='item_images/',default="item_images/food1.jpeg")
+    item_image = models.ImageField()
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     objects = ItemManager()
