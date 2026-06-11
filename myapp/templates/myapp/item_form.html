@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <div class="card p-4 shadow">
+        <h2 class="mb-4">Add Food Item</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="btn btn-success">
+                Add Food
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+

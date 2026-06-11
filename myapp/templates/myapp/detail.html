@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container mt-5">
+
+  <div class="row align-items-start">
+
+    <!-- IMAGE -->
+    <div class="col-md-5">
+      <img src="{{ item.item_image.url }}"
+           style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="col-md-7">
+
+      <h2 class="fw-bold mb-3">
+        {{ item.item_name|title }}
+      </h2>
+
+      <p class=" fw-bolder mb-3">
+        {{ item.item_desc }}
+      </p>
+
+      <h3 class="text-primary fw-bold mb-4">
+        ${{ item.item_price }}
+      </h3>
+
+      <hr>
+
+      <!-- BUTTONS -->
+      <div class="mt-4">
+ {% if item.user_name == request.user %}
+  <a href="{% url 'myapp:edit_item' item.id %}" class="btn btn-warning btn-lg me-2">
+    Edit
+  </a>
+
+  <a href="{% url 'myapp:delete_item' item.id %}" class="btn btn-danger btn-lg me-2">
+    Delete
+  </a>
+{%  endif %}
+  <a href="{% url 'myapp:index' %}" class="btn btn-outline-secondary btn-lg">
+    Back
+  </a>
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

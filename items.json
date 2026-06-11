@@ -1,0 +1,197 @@
+[
+{
+    "model": "myapp.item",
+    "pk": 1,
+    "fields": {
+        "user_name": 2,
+        "item_name": "momo",
+        "item_desc": "spicy",
+        "item_price": 85,
+        "item_image": "item_images/momo_JvYDmsJ.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:30:02.100Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 2,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Margherita Pizza",
+        "item_desc": "Classic Italian pizza with mozzarella and tomato",
+        "item_price": 8,
+        "item_image": "item_images/pizza_DLkjK6g.webp",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.844Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 3,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Cheeseburger",
+        "item_desc": "Beef patty with cheese, lettuce and tomato",
+        "item_price": 6,
+        "item_image": "item_images/burger_2QoKq97.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.847Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 4,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Caesar Salad",
+        "item_desc": "Crisp romaine with parmesan and croutons",
+        "item_price": 5,
+        "item_image": "item_images/csesar_salad.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.848Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 5,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Chicken Tacos",
+        "item_desc": "Soft tortillas with grilled chicken and salsa",
+        "item_price": 7,
+        "item_image": "item_images/chicken_tacos.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.850Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 6,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Sushi Platter",
+        "item_desc": "Assorted rolls with tuna, salmon and avocado",
+        "item_price": 12,
+        "item_image": "item_images/images_1.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.853Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 7,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Pasta Alfredo",
+        "item_desc": "Creamy white sauce pasta with mushrooms",
+        "item_price": 9,
+        "item_image": "item_images/smooth_plain_alfredo_header.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.854Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 10,
+    "fields": {
+        "user_name": 1,
+        "item_name": "French Fries",
+        "item_desc": "Crispy golden potato fries with salt",
+        "item_price": 3,
+        "item_image": "item_images/french.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.860Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 12,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Butter Chicken",
+        "item_desc": "Indian-style chicken in creamy tomato sauce",
+        "item_price": 11,
+        "item_image": "item_images/Butter-chicken-1-of-1.webp",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.862Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 13,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Ramen Bowl",
+        "item_desc": "Japanese noodle soup with egg and pork",
+        "item_price": 10,
+        "item_image": "item_images/images_4.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.864Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 17,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Pancakes",
+        "item_desc": "Stack of fluffy pancakes with maple syrup",
+        "item_price": 5,
+        "item_image": "item_images/images_3.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.872Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 18,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Mutton Biryani",
+        "item_desc": "Fragrant rice with spiced mutton",
+        "item_price": 12,
+        "item_image": "item_images/mutton.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.874Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 19,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Spring Rolls",
+        "item_desc": "Crispy rolls stuffed with vegetables",
+        "item_price": 4,
+        "item_image": "item_images/springroll.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.876Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 20,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Fish and Chips",
+        "item_desc": "British-style fried fish with fries",
+        "item_price": 9,
+        "item_image": "item_images/fish_and_chips.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.877Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 21,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Ice Cream Sundae",
+        "item_desc": "Vanilla ice cream topped with chocolate sauce",
+        "item_price": 4,
+        "item_image": "item_images/images_2.jpg",
+        "is_available": true,
+        "created_at": "2026-06-09T05:34:29.879Z"
+    }
+}
+]

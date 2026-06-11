@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5 text-center" style="max-width: 450px;background-color:  rgba(255, 255, 255, 0.779);">
+
+    <!-- PROFILE IMAGE -->
+    <img src="{{ profile.image.url }}"
+         width="140"
+         height="140"
+         class="mt-3"
+         style="border-radius: 50%; object-fit: cover;">
+
+    <!-- USERNAME -->
+    <h3 class="mt-3">
+        {{ profile.user.username }}
+    </h3>
+
+    <!-- EMAIL -->
+    <div style="margin-top: 25px;">
+        <p style="margin: 0; font-weight: 600;">Email:</p>
+        <p style="margin: 5px 0 0 0;">
+            {{ profile.user.email }}
+        </p>
+    </div>
+
+    <!-- LOCATION -->
+    <div style="margin-top: 25px;">
+        <p style="margin: 0; font-weight: 600;">Location:</p>
+
+        {% if profile.location %}
+            <p style="margin: 5px 0 0 0;">
+                {{ profile.location }}
+            </p>
+        {% else %}
+            <p style="margin: 5px 0 0 0; color: gray;">
+                Not added
+            </p>
+        {% endif %}
+    </div>
+
+    <!-- EDIT BUTTON -->
+    <a href="{% url 'users:edit_profile' %}"
+       class="btn btn-primary mt-4 mb-2">
+        Edit Profile
+    </a>
+    
+
+</div>
+
+{% endblock %}

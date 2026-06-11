@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container mt-4">
+  <div class="d-flex justify-content-end mb-3">
+        <a href="{% url 'myapp:create_item' %}"
+           class="btn btn-success btn-lg">
+            + Add Food
+        </a>
+    </div>
+  <div class="row">
+
+    {% for item in page_obj %}
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+
+      <div class="card food-card shadow-sm">
+
+          {% if item.item_image %}
+              <img src="{{ item.item_image.url }}" class="card-img-top food-img">
+          {% else %}
+              <img src="/static/images/default.jpg" class="card-img-top food-img">
+          {% endif %}
+
+        <div class="card-body p-2 text-center">
+
+          <h6 class="card-title mb-1 fw-bold">
+            {{ item.item_name |title}}
+          </h6>
+          <p class="card-text small text-muted mb-1">
+            {{ item.item_desc }}
+          </p>
+
+          <p class="card-text fw-bold text-primary mb-2">
+            ${{ item.item_price }}
+          </p>
+
+          <a href="{% url 'myapp:detail' item.id %}"
+             class="btn btn-danger btn-sm w-100 rounded-pill">
+            View Details
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {% endfor %}
+
+  </div>
+
+</div>
+<div class="food-pagination">
+
+    <nav>
+        <ul class="pagination">
+
+            <!-- Previous -->
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link"
+                       href="?page={{ page_obj.previous_page_number }}">
+                        ← Prev
+                    </a>
+                </li>
+            {% endif %}
+
+            <!-- Page Numbers -->
+            {% for num in page_obj.paginator.page_range %}
+
+                {% if page_obj.number == num %}
+                    <li class="page-item active">
+                        <a class="page-link"
+                           href="?page={{ num }}">
+                            {{ num }}
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="?page={{ num }}">
+                            {{ num }}
+                        </a>
+                    </li>
+                {% endif %}
+
+            {% endfor %}
+
+            <!-- Next -->
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link"
+                       href="?page={{ page_obj.next_page_number }}">
+                        Next →
+                    </a>
+                </li>
+            {% endif %}
+
+        </ul>
+    </nav>
+
+</div>
+{% endblock %}

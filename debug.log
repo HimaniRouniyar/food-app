@@ -1,0 +1,16 @@
+Fetching an item with id:21
+Item found Ice Cream Sundae ($4)
+fetching all items from the database
+User [2026-06-11T11:24:02.459811+00:00]admin requested item list from 127.0.0.1
+ found 13 items
+fetching all items from the database
+User [2026-06-11T14:07:51.059567+00:00]admin requested item list from 127.0.0.1
+ found 13 items
+fetching all items from the database
+User [2026-06-11T14:07:53.053389+00:00]admin requested item list from 127.0.0.1
+ found 13 items
+Watching for file changes with StatReloader
+fetching all items from the database
+User [2026-06-11T14:20:45.920990+00:00]admin requested item list from 127.0.0.1
+ found 13 items
+Not Found: /favicon.ico

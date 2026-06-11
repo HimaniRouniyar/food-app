@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodApp</title>
+
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<style>
+.fixed-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ⭐ CARD DESIGN */
+.food-card {
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: scale(1.03);
+}
+
+.food-img {
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 8px;
+}
+
+.btn {
+    font-size: 13px;
+}
+
+/* DETAIL CARD */
+.detail-card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.detail-card img {
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.btn-success:hover {
+    background-color: #198754;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.food-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.food-pagination .pagination {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.food-pagination .page-item .page-link {
+    border: none;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.food-pagination .page-item .page-link:hover {
+    background: blue;
+    color: white;
+}
+
+.food-pagination .page-item.active .page-link {
+    background: blue;
+    color: white;
+    font-weight: bold;
+}
+</style>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+
+        <a class="navbar-brand fw-bold" href="{% url 'myapp:index' %}">
+            FoodApp
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'users:profile' %}">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users:logout' %}">
+                            Logout
+                        </a>
+                    </li>
+
+                {% else %}
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="{% url 'users:register' %}">
+                            Register
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users:login' %}">
+                            Login
+                        </a>
+                    </li>
+
+                {% endif %}
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!-- MESSAGES -->
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- CONTENT -->
+<div class="container mt-5">
+    {% block body %}{% endblock %}
+</div>
+
+<script src="{% static 'myapp/js/jquery.js' %}"></script>
+<script src="{% static 'myapp/js/popper.js' %}"></script>
+<script src="{% static 'myapp/js/bootstrap.js' %}"></script>
+
+</body>
+</html>
